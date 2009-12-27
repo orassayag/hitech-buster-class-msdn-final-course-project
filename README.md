@@ -15,7 +15,7 @@ You'll need to install .Net, and Visual Studio 2013+.
 ## Built With
 
 * [ASP.NET Web-Forms](https://www.asp.net/web-forms) - The web framework used.
-* [SQL](https://azure.microsoft.com/en-us/services/sql-database/) - The database used. 
+* [SQL](https://azure.microsoft.com/en-us/services/sql-database/) - The database used.
 * [LINQ-TO-SQL](https://docs.microsoft.com/en-us/dotnet/framework/data/adonet/sql/linq/) - The component of .NET Framework.
 * [JavaScript](https://javascript.info/) - The web framework used.
 * [HTML/CSS](https://learn.shayhowe.com/html-css/) - The web framework used.
@@ -27,7 +27,7 @@ Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c6
 
 ## Versioning
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
+We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags).
 
 ## Authors
 
