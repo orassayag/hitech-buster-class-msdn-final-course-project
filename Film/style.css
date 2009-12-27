@@ -1,0 +1,339 @@
+/* Film CSS  LFS ACES*/
+
+
+body {
+margin:2em;
+padding:0;
+background: #000000;
+font-family: Arial, Helvetica, sans-serif;
+font-size:12px;
+}
+
+a {
+color:#cc0000;
+text-decoration:underline;
+}
+
+a:hover {
+color:#ffffff;
+text-decoration:none;
+}
+
+blockquote {
+margin:2em;
+padding:1.9em;
+font-weight: bold;
+font-size: 12px; 
+color: white;
+background-color:#000000;
+border-top:4px solid #FEED91;
+border-bottom:4px solid #FEED91;
+}
+
+blockquote p {
+margin:.1em;
+}
+
+#header {
+margin: 0 0 0.2em 0;
+padding: 1em 1.5em;
+height:8em;
+
+/* CHANGED */
+background: #343434 url('header.jpg') no-repeat top left ;
+border:1px solid ##2D5289;;
+}
+
+#header h1 { 
+margin:0; 
+padding:0;
+font-size:24px;
+color: black;
+font-family: Arial, Helvetica, sans-serif;
+}
+
+#header h3 { 
+margin:0; 
+padding:0;
+font-size:18px;
+color: black;
+font-family: Arial, Helvetica, sans-serif;
+}
+
+#header a {
+text-decoration:none;
+}
+
+
+
+#leftColumn {
+float: left;
+width:14em;
+
+margin: 0;
+padding: 1em .5em 2em .5em;
+background:#FFFFFF;
+border:1px solid #eeeeee;
+font-size:12px;
+font-family: Arial, Helvetica, sans-serif;
+text-align: justify;
+color: #000000;
+}
+
+#leftColumn h2 { 
+margin:0 0 -1em 0; 
+padding:0;
+font-size:12px;
+color: #BC7908;
+letter-spacing:.1em;
+}
+
+#leftColumn ul { 
+margin:1.5em 0 0 0; 
+padding:0;
+list-style:none;
+}
+
+#leftColumn li { 
+margin:0 0 .4em 0; 
+padding:0;
+}
+
+ #navcontainer { margin-right: 30px; }
+
+#navcontainer ul
+{
+margin: 0;
+padding: 0;
+list-style-type: none;
+font-family: arial;
+}
+
+#navcontainer li { margin: 0; }
+
+#navcontainer a
+{
+display: block;
+padding: 5px 10px;
+width: 140px;
+color: #fff;
+background-color: #000000;
+text-decoration: none;
+border-top: 2px solid #FFFFFF;
+border-left: 2px solid #FFFFFF;
+border-bottom: 2px solid #FFFFFF;
+border-right: 2px solid #FFFFFF;
+font-weight: bold;
+font-size: 12px; 
+}
+
+#navcontainer a:hover
+{
+color: #000;
+background-color: #FEED91;
+text-decoration: none;
+border-top: 2px solid #000;
+border-left: 2px solid #000;
+border-bottom: 2px solid #000;
+border-right: 2px solid #000;
+}
+
+#navcontainer ul ul li { margin: 0; }
+
+#navcontainer ul ul a
+{
+display: block;
+padding: 5px 5px 5px 30px;
+width: 125px;
+color: #FFFFFF;
+background-color: #000000;
+text-decoration: none;
+font-weight: bold;
+}
+
+#navcontainer ul ul a:hover
+{
+color: #000;
+background-color: #FEED91;
+text-decoration: none;
+}
+
+#navcontainer1 { margin-right: 30px; }
+
+#navcontainer1 ul
+{
+margin: 0;
+padding: 0;
+list-style-type: none;
+font-family: arial;
+}
+
+#navcontainer1 li { margin: 0; }
+
+#navcontainer1 a
+{
+display: block;
+padding: 5px 10px;
+width: 140px;
+color: #fff;
+background-color: #000000;
+text-decoration: none;
+border-top: 2px solid #FFFFFF;
+border-left: 2px solid #FFFFFF;
+border-bottom: 2px solid #FFFFFF;
+border-right: 2px solid #FFFFFF;
+font-weight: bold;
+font-size: 12px; 
+}
+
+#navcontainer1 a:hover
+{
+color: #000;
+background-color: #FEED91;
+text-decoration: none;
+border-top: 2px solid #000;
+border-left: 2px solid #000;
+border-bottom: 2px solid #000;
+border-right: 2px solid #000;
+}
+
+#navcontainer1 ul ul li { margin: 0; }
+
+#navcontainer1 ul ul a
+{
+display: block;
+padding: 5px 5px 5px 30px;
+width: 125px;
+color: #FFFFFF;
+background-color: #000000;
+text-decoration: none;
+font-weight: bold;
+}
+
+#navcontainer1 ul ul a:hover
+{
+color: #000;
+background-color: #FEED91;
+text-decoration: none;
+}
+
+#centerColumn {  
+  margin: 0 15.4em;
+  padding: 1em .5em 2em .5em;
+
+  
+  font-size:12px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: justify;
+  
+  background-color: #FFF;
+}
+
+/* Fix IE and Opera 5 */
+* html #centerColumn {
+  float: left;
+  margin-left: 0.2em;
+  margin-right: 0.2em;
+}
+
+#centerColumn h2 { 
+margin:0; 
+padding:0;
+font-size:1em;
+color: #BC7908;
+letter-spacing:.1em;
+}
+
+#centerColumn h3 { 
+margin:0; 
+padding:0;
+font-size: 12px;
+color: #000;
+text-align: center;
+letter-spacing:.1em;
+}
+
+#rightColumn {
+float: right;
+width:14em;
+
+margin:0;
+padding:1em .5em 2em .5em;
+background:#FFFFFF;
+border:1px solid #eeeeee;
+font-size:12px;
+font-family: Arial, Helvetica, sans-serif;
+text-align: justify;
+color: #000000;
+}
+
+#rightColumn h2 { 
+margin:0 0 -1em 0; 
+padding:0;
+font-size:12px;
+color: #BC7908;
+letter-spacing:.1em;
+}
+
+/* CHANGED */
+#wrapper {
+  overflow: hidden;
+}
+
+/* Start Mac IE5 filter \*/
+#leftColumn, #rightColumn, #centerColumn {
+  padding-bottom: 32767px;
+  margin-bottom: -32767px;
+}
+/* End Mac IE5 filter */
+
+/* Fix for Opera 8+ */
+@media all and (min-width: 0px) {
+  #leftColumn, #rightColumn, #centerColumn {
+    padding-bottom: 0;
+    margin-bottom: 0; 
+  }
+
+  #leftColumn:after, #rightColumn:after, #centerColumn:after {
+    content: '[DO NOT LEAVE IT IS NOT REAL]';
+    display: block;
+    background: inherit;
+    padding-top: 32767px;
+    margin-bottom: -32767px;
+    height: 0;
+  }
+}
+
+#tags {
+margin:0 0 .5em 0;
+width:10em;
+float:right;
+border:none;
+text-align:right;
+}
+
+#tags img {
+border:none;
+}
+
+#tags p {
+margin:0 0 .25em 0;
+}
+
+#tags a {
+font-size:.7em;
+color:#cc0000;
+}
+
+.centerimg {
+display:block;
+margin-left:auto;
+margin-right:auto;
+text-align:center;
+}
+
+#leftImg
+{
+float:left;
+padding: 0 0px 0px 0;
+}

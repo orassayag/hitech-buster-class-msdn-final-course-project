@@ -1,0 +1,295 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="01VideoLib.master.cs" Inherits="_01VideoLib" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <link rel="stylesheet" type="text/css" href="App_Themes/HitechBuster/HitechBuster.css"
+        media="screen" />
+
+    <script src="VideoLibJava.js" type="text/javascript"></script>
+    <title>Welcom To Hitech Buster!</title>
+    <style type="text/css">
+        .style1
+        {
+            width: 115%;
+            height: 94px;
+        }
+        #login
+        {
+            height: 105px;
+        }
+        .style2
+        {
+            width: 100%;
+        }
+        .style3
+        {
+            width: 221px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div style="background-image: url('Images/header.jpg'); height: 222px;">
+    </div>
+    
+    <table class="style2">
+        <tr>
+            <td class="style3">
+    
+    <h1 style="color: #FFFF00">
+        HiTech Buster<asp:ScriptManager ID="ScriptManager1" runat="server">
+            </asp:ScriptManager>
+                </h1>
+        
+            </td>
+            <td class="text" style="vertical-align:bottom">
+                                        <asp:UpdatePanel ID="upChangeTime" runat="server" UpdateMode="Conditional">
+                <ContentTemplate>
+                            Current Time: <%=CurrentTime.TimeNow.ToShortDateString() %>
+                                            <asp:Button ID="changeTimeBut" runat="server" 
+                    BackColor="White" ForeColor="#BC7908" 
+                                Text="Change Time" ToolTip="Click To Change The Time " 
+                                onclick="changeTimeBut_Click" />
+                                                <div id="changeTimeDiv" runat="server" visible="false" 
+                    
+                    style=" background-color:Red; position:absolute; top: 296px; left: 453px; width: 194px; height: 145px;">
+                                    <asp:Calendar ID="changeTimeCalender" runat="server" 
+                                        onselectionchanged="changeTimeCalender_SelectionChanged"></asp:Calendar>
+                </div>
+                </ContentTemplate>
+                                            <Triggers>
+                                                <asp:AsyncPostBackTrigger ControlID="changeTimeBut" EventName="Click" />
+                                            </Triggers>
+                </asp:UpdatePanel>
+                </td>
+        </tr>
+    </table>
+            &nbsp;
+    <!-- Used to force equal height columns -->
+    <div id="wrapper">
+                <asp:UpdatePanel ID="upLogin" runat="server" UpdateMode="Conditional">
+                <Triggers>
+                
+<asp:AsyncPostBackTrigger ControlID="loginBut" EventName="Click"></asp:AsyncPostBackTrigger>
+<asp:AsyncPostBackTrigger ControlID="logoutBut" EventName="Click"></asp:AsyncPostBackTrigger>
+                
+<asp:AsyncPostBackTrigger ControlID="loginBut" EventName="Click"></asp:AsyncPostBackTrigger>
+<asp:AsyncPostBackTrigger ControlID="logoutBut" EventName="Click"></asp:AsyncPostBackTrigger>
+                
+<asp:AsyncPostBackTrigger ControlID="loginBut" EventName="Click"></asp:AsyncPostBackTrigger>
+<asp:AsyncPostBackTrigger ControlID="logoutBut" EventName="Click"></asp:AsyncPostBackTrigger>
+                
+<asp:AsyncPostBackTrigger ControlID="loginBut" EventName="Click"></asp:AsyncPostBackTrigger>
+<asp:AsyncPostBackTrigger ControlID="logoutBut" EventName="Click"></asp:AsyncPostBackTrigger>
+                
+                </Triggers>
+                            <ContentTemplate>
+        <div id="leftColumn">
+            <h2>
+                Hitech Buster</h2>
+            <br />
+            <br />
+            <div id="loginDiv" runat="server">
+                <table class="style1">
+                    <tr>
+                        <td>
+                            <h2>
+                                Member ID</h2>
+                        </td>
+                        <td>
+                            <asp:TextBox ID="MemberID" runat="server" Width="64px" 
+                                ToolTip="Enter Your Member ID" EnableViewState="False"></asp:TextBox>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h2>
+                                Password</h2>
+                        </td>
+                        <td>
+                            <asp:TextBox ID="Password" runat="server" Width="64px" 
+                                ToolTip="Enter Your Password" EnableViewState="False" TextMode="Password"></asp:TextBox>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <asp:Label ID="errorLabel" runat="server" CssClass="errorText" Visible="False" 
+                                EnableViewState="False"></asp:Label>
+                            <asp:Label ID="a" runat="server" Visible="False"></asp:Label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <asp:Button ID="loginBut" runat="server" BackColor="White" ForeColor="#BC7908" 
+                                Text="Login" ToolTip="Click To Enter Your Account" 
+                                onclick="loginBut_Click" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <h5>
+                                Not A Member? <a href="20Sign-In.aspx">Sign In!</a></h5>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div id="logoutDiv" class="text" runat="server" visible="false">
+            Hello <a style="color:Red" href="30MemberDetails.aspx"><%=this.loggedInUser.memberName %></a>
+            <br />
+            Currently Rented: <%=this.loggedInUser.currentlyRented %>
+            <br />
+            Day Balance: <%=this.loggedInUser.dayBalance %>     
+            <br />
+            Past Du Date: <%=this.loggedInUser.pastDuDate %>
+            <br /> 
+            <a style="font-size:medium"; href="42ShowCart.aspx">My Cart <img alt="" src="Images/cart.gif" style="width: 27px; height: 27px" /></a>
+            <br />
+            <asp:Button ID="logoutBut" runat="server" BackColor="White" ForeColor="#BC7908" 
+    Text="Logout" ToolTip="Click To Exit From Your Account" CausesValidation="False" 
+                    onclick="logoutBut_Click" Width="57px" />
+
+                </div>
+            <br />
+            <br />
+            <h2>
+                Important News</h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aliquam auctor semper
+                libero.&nbsp;
+            </p>
+            <div id="navcontainer1">
+                <asp:Menu ID="mainMenu" runat="server" CssClass="toolbar" Width="16px">
+                    <StaticMenuStyle CssClass="toolbar" />
+                    <StaticSelectedStyle CssClass="toolbar" />
+                    <StaticMenuItemStyle CssClass="toolbar" />
+                    <DynamicHoverStyle CssClass="toolbar" />
+                    <DynamicMenuStyle CssClass="toolbar" />
+                    <DynamicMenuItemStyle CssClass="toolbar" />
+                    <Items>
+                        <asp:MenuItem Text="Movies" Value="Movies">
+                            <asp:MenuItem NavigateUrl="~/32RentalHistory.aspx" Text="My Rental History" 
+                                Value="My Rental History"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/33CurrentlyRented.aspx" Text="My Currently Rented" 
+                                Value="My Currently Rented"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/34Reviews.aspx" Text="My Reviews" 
+                                Value="My Reviews"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/35RecommendedForYou.aspx" 
+                                Text="Recommended For You " Value="Recommended For You "></asp:MenuItem>
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="Subscriptions" Value="Subscriptions" Enabled="False">
+                            <asp:MenuItem NavigateUrl="~/31AddSubscriptions.aspx" 
+                                Text="Renew Subscription " Value="New Item"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/33CurrentlyRented.aspx" Text="Return Movies" 
+                                Value="New Item"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/36WaitingList.aspx" Text="My Waiting List" 
+                                Value="New Item"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/32RentalHistory.aspx" Text="My Rental History" 
+                                Value="New Item"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/38RentStatus.aspx" Text="My Rent Status" 
+                                Value="New Item"></asp:MenuItem>
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="Libary" Value="Libary" Enabled="False">
+                            <asp:MenuItem NavigateUrl="~/50AddMovie.aspx" Text="Add Movie" Value="New Item">
+                            </asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/51AddMovieCopies.aspx" Text="Add Movie Copies" 
+                                Value="New Item"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/52RemoveMovie.aspx" Text="Remove Movie" 
+                                Value="New Item"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/53PastDuDate.aspx" Text="Past Due Date Report " 
+                                Value="New Item"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/54MoviesWithLongWaitingList.aspx" 
+                                Text="Movies With Long Waiting List " Value="New Item"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/55DeadMovies.aspx" Text="Dead Movie Report " 
+                                Value="New Item"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/56InactiveRenters.aspx" Text="Inactive Renters " 
+                                Value="New Item"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/57RentActivityPerMonth.aspx" 
+                                Text="Rent Activity Per Month " Value="New Item"></asp:MenuItem>
+                        </asp:MenuItem>
+                    </Items>
+                </asp:Menu>
+            </div>
+            <p>
+                <img src="Images/reel.jpg" alt="coin" height="100" width="96" /></p>
+            <!--//end #tags//-->
+        </div>
+                                </ContentTemplate>
+                    <Triggers>
+                        <asp:AsyncPostBackTrigger ControlID="loginBut" EventName="Click" />
+                        <asp:AsyncPostBackTrigger ControlID="logoutBut" EventName="Click" />
+                    </Triggers>
+            </asp:UpdatePanel>
+        <!--//end #leftColumn//-->
+        <div id="rightColumn">
+            <h2>
+                Category</h2>
+            <div id="navcontainer2">
+                <asp:Menu ID="categoryMenu" runat="server" CssClass="toolbar" Width="16px">
+                    <StaticMenuStyle CssClass="toolbar" />
+                    <StaticMenuItemStyle CssClass="toolbar" />
+                    <DynamicHoverStyle CssClass="toolbar" />
+                    <DynamicMenuStyle CssClass="toolbar" />
+                </asp:Menu>
+            </div>
+            <br />
+            <div>
+            <h2>
+                Important News</h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aliquam auctor semper
+                libero.&nbsp;
+            </p>
+            <p>
+                <img src="Images/reel.jpg" alt="coin" height="100" width="96" /></p>
+                </div>
+            <div id="tags">
+                <p>
+                    &nbsp;</p>
+                <p>
+                    &nbsp;</p>
+            </div>
+            <!--//end #tags//-->
+        </div>
+        <!--//end #rightColumn//-->
+        <div id="centerColumn">
+            <asp:ContentPlaceHolder ID="body" runat="server">
+            </asp:ContentPlaceHolder>
+                
+ <%--               
+            <p>
+                <img src="Images/film.gif" alt="film" id="leftImg" />Lorem ipsum dolor sit amet,
+                consectetuer adipiscing elit. Aliquam auctor semper libero. viverra porttitor. Phasellus
+                eu lorem vitae augue aliquet aliquam. Integer vitae, ligula. Vivamus vitae augue
+                at dui consequat tempor. Aliquam auctor semper libero. viverra porttitor. Phasellus
+                eu lorem vitae augue aliquet aliquam. Integer vitae, ligula. Vivamus vitae augue
+                at dui consequat tempor. Aliquam auctor semper libero. viverra porttitor. Phasellus
+                eu lorem vitae augue aliquet aliquam. Integer vitae, ligula. Vivamus vitae augue
+                at dui consequat tempor.</p>
+            <blockquote>
+                <p>
+                    This page is valid xhtml 1.0 strict. Thank you to css Tinderbox for helping to build
+                    this foundation for the template. Please let me know how you use this template.
+                    Thank you to Animation Factory for the images.&nbsp;</p>
+            </blockquote>
+            <h2>
+                &nbsp;</h2>
+            <h2>
+                More Information
+            </h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aliquam auctor semper
+                libero. Vestibulum at erat eget arcu sagittis adipiscing. Vestibulum odio nisi,
+                scelerisque et.&nbsp;</p>
+            <p>
+                This page is valid xhtml 1.0 strict.</p>
+            <br />
+            <h3>
+                Copyright 2007 Design by <a href="http://www.projectaces.com">LS</a></h3>
+            <br />--%>
+        </div>
+    </div>
+    <!--//end #wrapper -->
+    </form>
+</body>
+</html>

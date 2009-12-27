@@ -1,0 +1,30 @@
+C:\1205home\071009\Dal\bin\Debug\Dal.dll
+C:\1205home\071009\Dal\bin\Debug\Dal.pdb
+C:\1205home\071009\Dal\obj\Debug\ResolveAssemblyReference.cache
+C:\1205home\071009\Dal\obj\Debug\Dal.dll
+C:\1205home\071009\Dal\obj\Debug\Dal.pdb
+C:\1205home\071009\Dal\bin\Debug\Dal.dll.config
+C:\1205home\140909\071009\Dal\bin\Debug\Dal.dll.config
+C:\1205home\140909\071009\Dal\bin\Debug\Dal.dll
+C:\1205home\140909\071009\Dal\bin\Debug\Dal.pdb
+C:\1205home\140909\071009\Dal\obj\Debug\ResolveAssemblyReference.cache
+C:\1205home\140909\071009\Dal\obj\Debug\Dal.dll
+C:\1205home\140909\071009\Dal\obj\Debug\Dal.pdb
+C:\1205home\211009\071009\Dal\bin\Debug\Dal.dll.config
+C:\1205home\211009\071009\Dal\bin\Debug\Dal.dll
+C:\1205home\211009\071009\Dal\bin\Debug\Dal.pdb
+C:\1205home\211009\071009\Dal\obj\Debug\ResolveAssemblyReference.cache
+C:\1205home\211009\071009\Dal\obj\Debug\Dal.dll
+C:\1205home\211009\071009\Dal\obj\Debug\Dal.pdb
+C:\1205home\HitechBuster - Final\Dal\bin\Debug\Dal.dll.config
+C:\1205home\HitechBuster - Final\Dal\bin\Debug\Dal.dll
+C:\1205home\HitechBuster - Final\Dal\bin\Debug\Dal.pdb
+C:\1205home\HitechBuster - Final\Dal\obj\Debug\ResolveAssemblyReference.cache
+C:\1205home\HitechBuster - Final\Dal\obj\Debug\Dal.dll
+C:\1205home\HitechBuster - Final\Dal\obj\Debug\Dal.pdb
+C:\1205home\HitechBuster Class - Final\Dal\bin\Debug\Dal.dll.config
+C:\1205home\HitechBuster Class - Final\Dal\bin\Debug\Dal.dll
+C:\1205home\HitechBuster Class - Final\Dal\bin\Debug\Dal.pdb
+C:\1205home\HitechBuster Class - Final\Dal\obj\Debug\ResolveAssemblyReference.cache
+C:\1205home\HitechBuster Class - Final\Dal\obj\Debug\Dal.dll
+C:\1205home\HitechBuster Class - Final\Dal\obj\Debug\Dal.pdb

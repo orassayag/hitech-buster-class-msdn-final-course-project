@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="VideoLibProject_AfterFix" Class="VideoLibDBDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=HOME\MSSQLSERVER1;Initial Catalog=VideoLibProject_AfterFix;Integrated Security=True" SettingsObjectName="Dal.Properties.Settings" SettingsPropertyName="VideoLibProject_AfterFixConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Actor" Member="Actors">
+    <Type Name="Actor">
+      <Column Name="ActorID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ActorName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="BirthDate" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Association Name="Actor_ActorMovie" Member="ActorMovies" ThisKey="ActorID" OtherKey="ActorID" Type="ActorMovie" />
+    </Type>
+  </Table>
+  <Table Name="dbo.WaitingList" Member="WaitingLists">
+    <Type Name="WaitingList">
+      <Column Name="MemberID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MovieID" Type="System.String" DbType="NChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="WaitDate" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Association Name="Member_WaitingList" Member="Member" ThisKey="MemberID" OtherKey="MemberID" Type="Member" IsForeignKey="true" />
+      <Association Name="Movie_WaitingList" Member="Movie" ThisKey="MovieID" OtherKey="MovieID" Type="Movie" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ActorMovie" Member="ActorMovies">
+    <Type Name="ActorMovie">
+      <Column Name="ActorID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MovieID" Type="System.String" DbType="NChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="Actor_ActorMovie" Member="Actor" ThisKey="ActorID" OtherKey="ActorID" Type="Actor" IsForeignKey="true" />
+      <Association Name="Movie_ActorMovie" Member="Movie" ThisKey="MovieID" OtherKey="MovieID" Type="Movie" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Country" Member="Countries">
+    <Type Name="Country">
+      <Column Name="CountryID" Type="System.Int16" DbType="SmallInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CountryName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="Country_Movie" Member="Movies" ThisKey="CountryID" OtherKey="CountryID" Type="Movie" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Member" Member="Members">
+    <Type Name="Member">
+      <Column Name="MemberID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MemberLevel" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="FirstName" Type="System.String" DbType="NChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="LastName" Type="System.String" DbType="NChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="BirthDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="Street" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="City" Type="System.String" DbType="NChar(30)" CanBeNull="true" />
+      <Column Name="HouseNumber" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="HomePhone" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MobilePhone" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Password" Type="System.String" DbType="NChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="DaysBalance" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="MemberSince" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Association Name="Member_WaitingList" Member="WaitingLists" ThisKey="MemberID" OtherKey="MemberID" Type="WaitingList" />
+      <Association Name="Member_Rent" Member="Rents" ThisKey="MemberID" OtherKey="MemberID" Type="Rent" />
+      <Association Name="Member_Review" Member="Reviews" ThisKey="MemberID" OtherKey="MemberID" Type="Review" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Movie" Member="Movies">
+    <Type Name="Movie">
+      <Column Name="MovieID" Type="System.String" DbType="NChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MovieName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="MovieTypeID" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="Copies" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="Summary" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Year" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="Lenght" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="CountryID" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="MoviePicUrl" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="TrailerUrl" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Active" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Column Name="DateAdded" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Association Name="Movie_WaitingList" Member="WaitingLists" ThisKey="MovieID" OtherKey="MovieID" Type="WaitingList" />
+      <Association Name="Movie_ActorMovie" Member="ActorMovies" ThisKey="MovieID" OtherKey="MovieID" Type="ActorMovie" />
+      <Association Name="Movie_Rent" Member="Rents" ThisKey="MovieID" OtherKey="MovieID" Type="Rent" />
+      <Association Name="Movie_Review" Member="Reviews" ThisKey="MovieID" OtherKey="MovieID" Type="Review" />
+      <Association Name="Country_Movie" Member="Country" ThisKey="CountryID" OtherKey="CountryID" Type="Country" IsForeignKey="true" />
+      <Association Name="MovieType_Movie" Member="MovieType" ThisKey="MovieTypeID" OtherKey="MovieTypeID" Type="MovieType" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MovieType" Member="MovieTypes">
+    <Type Name="MovieType">
+      <Column Name="MovieTypeID" Type="System.Int16" DbType="SmallInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MovieTypeName" Type="System.String" DbType="NChar(20) NOT NULL" CanBeNull="false" />
+      <Association Name="MovieType_Movie" Member="Movies" ThisKey="MovieTypeID" OtherKey="MovieTypeID" Type="Movie" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Rent" Member="Rents">
+    <Type Name="Rent">
+      <Column Name="MemberID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MovieID" Type="System.String" DbType="NChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="RentStart" Type="System.DateTime" DbType="Date NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="RentEnd" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="RentDays" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Member_Rent" Member="Member" ThisKey="MemberID" OtherKey="MemberID" Type="Member" IsForeignKey="true" />
+      <Association Name="Movie_Rent" Member="Movie" ThisKey="MovieID" OtherKey="MovieID" Type="Movie" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Review" Member="Reviews">
+    <Type Name="Review">
+      <Column Name="MemberID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MovieID" Type="System.String" DbType="NChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ReviewText" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Rate" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Association Name="Member_Review" Member="Member" ThisKey="MemberID" OtherKey="MemberID" Type="Member" IsForeignKey="true" />
+      <Association Name="Movie_Review" Member="Movie" ThisKey="MovieID" OtherKey="MovieID" Type="Movie" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

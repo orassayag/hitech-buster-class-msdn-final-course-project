@@ -1,0 +1,45 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "VideoLib", ".", "{0862484B-7E6C-44C8-88C1-48E2124261AB}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFramework = "3.5"
+		ProjectReferences = "{F28999C0-C736-4710-BC98-F456B5ACB5C9}|Dal.dll;"
+		Debug.AspNetCompiler.VirtualPath = "/VideoLib"
+		Debug.AspNetCompiler.PhysicalPath = "..\VideoLib\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\VideoLib\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/VideoLib"
+		Release.AspNetCompiler.PhysicalPath = "..\VideoLib\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\VideoLib\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "1069"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dal", "..\Dal\Dal.csproj", "{F28999C0-C736-4710-BC98-F456B5ACB5C9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0862484B-7E6C-44C8-88C1-48E2124261AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0862484B-7E6C-44C8-88C1-48E2124261AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0862484B-7E6C-44C8-88C1-48E2124261AB}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{0862484B-7E6C-44C8-88C1-48E2124261AB}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{F28999C0-C736-4710-BC98-F456B5ACB5C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F28999C0-C736-4710-BC98-F456B5ACB5C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F28999C0-C736-4710-BC98-F456B5ACB5C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F28999C0-C736-4710-BC98-F456B5ACB5C9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
