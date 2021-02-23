@@ -1,7 +1,6 @@
 # Hitech Buster Class MSDN Final Course Project
 
-Built in December 2009. Hitech Buster site built as a final course project of my studies.
-Built using ASP.NET Web-Forms + JavaScript (ES5), Database as of LINQ-TO-SQL.
+Built in December 2009. Hitech Buster site built as a final course project of my studies. Built using ASP.NET Web-Forms + JavaScript (ES5), Database as of LINQ-TO-SQL.
 
 ## Getting Started
 
