@@ -63,7 +63,7 @@
       <Column Name="Copies" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
       <Column Name="Summary" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
       <Column Name="Year" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
-      <Column Name="Lenght" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="Length" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
       <Column Name="CountryID" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
       <Column Name="MoviePicUrl" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
       <Column Name="TrailerUrl" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />

@@ -137,7 +137,7 @@ namespace Dal
                 me.Copies = m.Copies;
                 me.Country = m.Country;
                 me.DateAdded = m.DateAdded;
-                me.Lenght = m.Lenght;
+                me.Length = m.Length;
                 me.MovieName = m.MovieName;
                 me.MovieType = m.MovieType;
                 me.Summary = m.Summary;
@@ -171,7 +171,7 @@ namespace Dal
             return q.Take(chartNumber);
         }
 
-        public IEnumerable<PastDuDate> CurrentlyRented(int memberID, DateTime timeNow)
+        public IEnumerable<PastDueDate> CurrentlyRented(int memberID, DateTime timeNow)
         {
             Member m = this.GetMember_MemberID(memberID);
             if (m == null)
@@ -182,7 +182,7 @@ namespace Dal
                     where rent.MemberID == memberID &&
                     rent.RentEnd == null
                     orderby rent.RentStart ascending
-                    select new PastDuDate(rent, timeNow);
+                    select new PastDueDate(rent, timeNow);
             return q;
         }
 
@@ -202,7 +202,7 @@ namespace Dal
             return q.Count();
         }
 
-        public IEnumerable<Rent> PastDuDate(int memberID, DateTime timeNow)
+        public IEnumerable<Rent> PastDueDate(int memberID, DateTime timeNow)
         {
             Member m = this.GetMember_MemberID(memberID);
             if (m == null || timeNow == default(DateTime))
@@ -219,7 +219,7 @@ namespace Dal
             return q;
         }
 
-        public int PastDuDateCount(int memberID, DateTime timeNow)
+        public int PastDueDateCount(int memberID, DateTime timeNow)
         {
             Member m = this.GetMember_MemberID(memberID);
             if (m == null || timeNow == default(DateTime))
@@ -236,7 +236,7 @@ namespace Dal
             return q.Count();
         }
 
-        public IEnumerable<PastDuDate> RentalHistoryRents(int memberID, DateTime timeNow)
+        public IEnumerable<PastDueDate> RentalHistoryRents(int memberID, DateTime timeNow)
         {
             Member m = this.GetMember_MemberID(memberID);
             if (m == null)
@@ -247,11 +247,11 @@ namespace Dal
             var q = from rent in this.videoDB.Rents
                     where rent.MemberID == memberID
                     orderby rent.RentStart ascending
-                    select new PastDuDate(rent, timeNow);
+                    select new PastDueDate(rent, timeNow);
             return q;
         }
 
-        public IEnumerable<PastDuDate> RentalHistoryMovies(int memberID, DateTime timeNow)
+        public IEnumerable<PastDueDate> RentalHistoryMovies(int memberID, DateTime timeNow)
         {
             Member m = this.GetMember_MemberID(memberID);
             if (m == null)
@@ -262,7 +262,7 @@ namespace Dal
             var q = from rent in this.videoDB.Rents
                     where rent.MemberID == memberID
                     orderby rent.RentStart ascending
-                    select new PastDuDate(rent, timeNow);
+                    select new PastDueDate(rent, timeNow);
             return q.Distinct();
         }
 
@@ -350,7 +350,7 @@ namespace Dal
             return q;
         }
 
-        public IEnumerable<PastDuDate> GetAllPastDuDates(DateTime timeNow)
+        public IEnumerable<PastDueDate> GetAllPastDueDates(DateTime timeNow)
         {
             if (timeNow == default(DateTime))
             {
@@ -361,7 +361,7 @@ namespace Dal
                     where rent.RentEnd == null &&
                     rent.RentDays < (timeNow - rent.RentStart).Days
                     orderby (timeNow - rent.RentStart).Days descending
-                    select new PastDuDate(rent, timeNow);
+                    select new PastDueDate(rent, timeNow);
             return q;
         }
 
@@ -657,7 +657,7 @@ namespace Dal
             }
         }
 
-        public IEnumerable<Rent> PastDuDate(DateTime timeNow)
+        public IEnumerable<Rent> PastDueDate(DateTime timeNow)
         {
             if (timeNow == default(DateTime))
             {
@@ -672,7 +672,7 @@ namespace Dal
             return q;
         }
 
-        public int PastDuDateCount(DateTime timeNow)
+        public int PastDueDateCount(DateTime timeNow)
         {
             if (timeNow == default(DateTime))
             {
@@ -739,7 +739,7 @@ namespace Dal
                 return q.Count();
             }
         }
-        
+
         public double Rate
         {
             get
@@ -971,7 +971,7 @@ namespace Dal
             }
         }
 
-        public string WateDateToString
+        public string WaitDateToString
         {
             get
             {
@@ -981,18 +981,18 @@ namespace Dal
         }
     }
 
-    public class PastDuDate
+    public class PastDueDate
     {
         private Rent rent;
         private DateTime timeNow;
 
-        public PastDuDate(Rent rent, DateTime timeNow)
+        public PastDueDate(Rent rent, DateTime timeNow)
         {
             this.timeNow = timeNow;
             this.rent = rent;
         }
 
-        public string IsPastDu
+        public string IsPastDue
         {
             get
             {

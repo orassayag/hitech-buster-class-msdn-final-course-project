@@ -32,7 +32,7 @@ function onReviews(but) {
     }
 }
 
-function rate(imgeStar) {
+function rate(imageStar) {
 
     var stars = new Array();
     for (var i = 0; i < 5; i++) {
@@ -42,7 +42,7 @@ function rate(imgeStar) {
 
     var count = 0;
 
-    switch (imgeStar.id) {
+    switch (imageStar.id) {
         case "star1":
             count = 1;
             break;
@@ -70,17 +70,17 @@ function rate(imgeStar) {
 
 
 }
-function onStar(imgeStar) {
+function onStar(imageStar) {
 
     var stars = new Array();
     for (var i = 1; i <= 5; i++) {
 
         stars[i] = document.getElementById("star" + i);
     }
-    
+
     var count = 0;
 
-    switch (imgeStar.id) {
+    switch (imageStar.id) {
         case "star1":
             count = 1;
             break;
@@ -104,7 +104,7 @@ function onStar(imgeStar) {
         document.getElementById("star" + y).src = "Images/starfull.gif";
     }
 }
-function offStar(imgeStar) {
+function offStar(imageStar) {
 
     for (var y = 1; y <= 5; y++) {
 

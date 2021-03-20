@@ -1,10 +1,10 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/01VideoLib.master" AutoEventWireup="true" CodeFile="53PastDuDate.aspx.cs" Inherits="_53PastDuDate" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/01VideoLib.master" AutoEventWireup="true" CodeFile="53PastDueDate.aspx.cs" Inherits="_53PastDueDate" %>
 <%@ MasterType VirtualPath="~/01VideoLib.master" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="body" Runat="Server">
     <div id="resultsDiv" runat="server">
-<h4 style="text-align:center; width: 398px;">Past Du Date</h4>
-    <asp:GridView ID="pastDuDateGrid" runat="server"
+<h4 style="text-align:center; width: 398px;">Past Due Date</h4>
+    <asp:GridView ID="pastDueDateGrid" runat="server"
             AutoGenerateColumns="False"
             GridLines="None"
             CssClass="mGrid"

@@ -20,7 +20,7 @@ public partial class _33CurrentlyRented : System.Web.UI.Page
         {
             Member m = this.Master.VideoDB.GetMember_MemberID
                        (this.Master.LoggedInUser.memberID);
-            this.addReviwControl.SetControl(m, 
+            this.addReviewControl.SetControl(m,
             this.Master.VideoDB.GetMovie_MovieID(this.SecretValue), this.Master.VideoDB);
         }
     }
@@ -28,7 +28,7 @@ public partial class _33CurrentlyRented : System.Web.UI.Page
     {
         Movie m = this.Master.VideoDB.GetMovie_MovieID
                   (this.currentlyGrid.Rows[e.NewEditIndex].Cells[0].Text);
-        this.Master.VideoDB.Return(this.Master.LoggedInUser.memberID, m.MovieID, 
+        this.Master.VideoDB.Return(this.Master.LoggedInUser.memberID, m.MovieID,
                             CurrentTime.TimeNow);
         this.Master.LoggedInUser.UpdateStatistics();
         this.SecretValue = m.MovieID;

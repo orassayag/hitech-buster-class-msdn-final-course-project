@@ -23,11 +23,11 @@ public partial class _54MoviesWithLongWaitingList : System.Web.UI.Page
         {
             if (d <= 0)
             {
-                this.errorLabel.Text = "Larger Then 0";
+                this.errorLabel.Text = "Larger Than 0";
                 return;
             }
 
-            this.waitingListGrid.DataSource = 
+            this.waitingListGrid.DataSource =
                 this.Master.VideoDB.GetMoviesWithWaiters(d);
             this.waitingListGrid.DataBind();
             this.resultsDiv.Visible = true;

@@ -23,23 +23,23 @@
 <h2>Member Since:</h2> <%=this.member.MemberSince.ToShortDateString() %>
 <h2>Day Balance:</h2> <%=this.member.DaysBalance %>
 <h2>Currently Rented:</h2> <%=this.member.CurrentlyRentedCount %>
-<h2>Past Du Date:</h2> <%=this.member.PastDuDateCount(CurrentTime.TimeNow) %>
+<h2>Past Due Date:</h2> <%=this.member.PastDueDateCount(CurrentTime.TimeNow) %>
     <table style="width: 100%">
         <tr align="center">
             <td>
-                <asp:Button 
-                                            ID="changeDetailsBut" runat="server" 
-                    BackColor="White" ForeColor="#BC7908" 
-                                Text="Change Details" ToolTip="Click To Change Details" Width="99px" 
+                <asp:Button
+                                            ID="changeDetailsBut" runat="server"
+                    BackColor="White" ForeColor="#BC7908"
+                                Text="Change Details" ToolTip="Click To Change Details" Width="99px"
                                             onclick="changeDetailsBut_Click" />
-                        
+
                                     </td>
             <td>
-                <asp:Button 
-                                            ID="okBut" runat="server" BackColor="White" ForeColor="#BC7908" 
-                                Text="OK" ToolTip="Click To Continue" Width="90px" 
+                <asp:Button
+                                            ID="okBut" runat="server" BackColor="White" ForeColor="#BC7908"
+                                Text="OK" ToolTip="Click To Continue" Width="90px"
                                             onclick="okBut_Click" />
-                        
+
                                     </td>
         </tr>
     </table>

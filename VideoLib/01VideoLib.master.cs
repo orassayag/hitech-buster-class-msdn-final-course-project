@@ -132,7 +132,7 @@ public partial class _01VideoLib : System.Web.UI.MasterPage
         this.logoutDiv.Visible = false;
         this.mainMenu.Items[1].Enabled = false;
         this.mainMenu.Items[2].Enabled = false;
-        this.cart.RemovAll();
+        this.cart.RemoveAll();
     }
 
     public bool PageIsValid()

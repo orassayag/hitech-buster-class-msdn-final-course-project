@@ -15,7 +15,7 @@
             <asp:BoundField DataField="MovieName" HeaderText="Name" />
             <asp:BoundField DataField="RentStartToString" HeaderText="Rent Start" />
             <asp:BoundField DataField="RentEndToString" HeaderText="Rent End" />
-            <asp:BoundField DataField="IsPastDu" HeaderText="Is Past Du?" />
+            <asp:BoundField DataField="IsPastDue" HeaderText="Is Past Due?" />
             <asp:BoundField DataField="Days" HeaderText="Rent Days" />
         </Columns>
 

@@ -13,7 +13,7 @@
         <Columns>
             <asp:BoundField DataField="MovieID" HeaderText="ID" />
             <asp:BoundField DataField="MovieName" HeaderText="Name" />
-            <asp:BoundField DataField="WateDateToString" HeaderText="Waiting Since" />
+            <asp:BoundField DataField="WaitDateToString" HeaderText="Waiting Since" />
             <asp:BoundField DataField="InStock" HeaderText="In Stock?" />
         </Columns>
 

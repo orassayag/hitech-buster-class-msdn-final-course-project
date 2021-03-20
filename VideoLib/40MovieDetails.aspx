@@ -13,7 +13,7 @@
         <%=this.movie.Summary %>
         <%=this.movie.StarRate %>
         <br />
-        <%=this.movie.Lenght %>
+        <%=this.movie.Length %>
         Minutes
         <br />
         <%=this.movie.Country.CountryName %>

@@ -1274,7 +1274,7 @@ namespace Dal
 		
 		private short _Year;
 		
-		private short _Lenght;
+		private short _Length;
 		
 		private short _CountryID;
 		
@@ -1314,8 +1314,8 @@ namespace Dal
     partial void OnSummaryChanged();
     partial void OnYearChanging(short value);
     partial void OnYearChanged();
-    partial void OnLenghtChanging(short value);
-    partial void OnLenghtChanged();
+    partial void OnLengthChanging(short value);
+    partial void OnLengthChanged();
     partial void OnCountryIDChanging(short value);
     partial void OnCountryIDChanged();
     partial void OnMoviePicUrlChanging(string value);
@@ -1463,22 +1463,22 @@ namespace Dal
 			}
 		}
 		
-		[Column(Storage="_Lenght", DbType="SmallInt NOT NULL")]
-		public short Lenght
+		[Column(Storage="_Length", DbType="SmallInt NOT NULL")]
+		public short Length
 		{
 			get
 			{
-				return this._Lenght;
+				return this._Length;
 			}
 			set
 			{
-				if ((this._Lenght != value))
+				if ((this._Length != value))
 				{
-					this.OnLenghtChanging(value);
+					this.OnLengthChanging(value);
 					this.SendPropertyChanging();
-					this._Lenght = value;
-					this.SendPropertyChanged("Lenght");
-					this.OnLenghtChanged();
+					this._Length = value;
+					this.SendPropertyChanged("Length");
+					this.OnLengthChanged();
 				}
 			}
 		}

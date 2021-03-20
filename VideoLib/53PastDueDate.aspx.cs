@@ -5,11 +5,11 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-public partial class _53PastDuDate : System.Web.UI.Page
+public partial class _53PastDueDate : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        this.pastDuDateGrid.DataSource = this.Master.VideoDB.GetAllPastDuDates
+        this.pastDueDateGrid.DataSource = this.Master.VideoDB.GetAllPastDueDates
                                          (CurrentTime.TimeNow);
         this.DataBind();
     }

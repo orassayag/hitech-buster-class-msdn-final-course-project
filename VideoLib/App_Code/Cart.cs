@@ -15,7 +15,7 @@ public class Cart: IEnumerable<CartItem>
     private HttpResponse response;
     private DataCache videoDB;
 
-    public Cart(DataCache videoDB, HttpRequest request, HttpResponse response) : 
+    public Cart(DataCache videoDB, HttpRequest request, HttpResponse response) :
         this(videoDB, request, response, 10) { }
 
     public Cart(DataCache videoDB, HttpRequest request, HttpResponse response, int listSize)
@@ -78,7 +78,7 @@ public class Cart: IEnumerable<CartItem>
         }
     }
 
-    public void RemovAll()
+    public void RemoveAll()
     {
         this.itemList.Clear();
         this.response.Cookies["Cart"].Value = null;

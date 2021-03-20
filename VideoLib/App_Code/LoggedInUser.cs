@@ -14,7 +14,7 @@ public class LoggedInUser
     public int memberLevel { get; private set; }
     public string memberName { get; private set; }
     public int currentlyRented { get; private set; }
-    public int pastDuDate { get; private set; }
+    public int pastDueDate { get; private set; }
     public int dayBalance { get; private set; }
 
     private DataCache videoDB;
@@ -31,7 +31,7 @@ public class LoggedInUser
             this.memberID = l.memberID;
             this.memberName = l.memberName;
             this.memberLevel = l.memberLevel;
-            this.pastDuDate = l.pastDuDate;
+            this.pastDueDate = l.pastDueDate;
             this.currentlyRented = l.currentlyRented;
             this.dayBalance = l.dayBalance;
             this.session["UserInfo"] = this;
@@ -47,7 +47,7 @@ public class LoggedInUser
         Member m = this.videoDB.GetMember_MemberID(this.memberID);
         this.memberLevel = m.MemberLevel;
         this.memberName = m.FullName;
-        this.pastDuDate = m.PastDuDateCount(CurrentTime.TimeNow);
+        this.pastDueDate = m.PastDueDateCount(CurrentTime.TimeNow);
         this.currentlyRented = m.CurrentlyRentedCount;
         this.dayBalance = m.DaysBalance;
         this.session["UserInfo"] = this;
