@@ -8,7 +8,7 @@ Clone the project to your computer.
 
 ### Prerequisites
 
-You'll need to install .Net, and Visual Studio 2013+.
+You'll need to install .NET, and Visual Studio 2013+.
 
 ## Built With
 
