@@ -1,0 +1,40 @@
+{
+  "name": "hitech-buster-video-rental-system",
+  "version": "1.0.0",
+  "description": "A comprehensive video rental library management system built with ASP.NET Web Forms. Similar to Blockbuster, this application manages movie rentals, member subscriptions, waiting lists, reviews, and provides administrative tools for library management.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/orassayag/hitech-buster-class-msdn-final-course-project.git"
+  },
+  "keywords": [
+    "video-rental",
+    "library-management",
+    "aspnet",
+    "webforms",
+    "linq-to-sql",
+    "csharp",
+    "rental-system",
+    "movie-rental",
+    "blockbuster",
+    "subscription-management",
+    "shopping-cart",
+    "database",
+    "sql-server",
+    "legacy-application",
+    "educational-project"
+  ],
+  "author": {
+    "name": "Or Assayag",
+    "email": "orassayag@gmail.com",
+    "url": "https://github.com/orassayag"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/orassayag/hitech-buster-class-msdn-final-course-project/issues"
+  },
+  "homepage": "https://github.com/orassayag/hitech-buster-class-msdn-final-course-project#readme"
+}
