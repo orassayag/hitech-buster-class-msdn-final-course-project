@@ -1,16 +1,25 @@
 {
-    "cSpell.words": [
-        "Assayag",
-        "Hitech",
-        "LINQ",
-        "Wireup",
-        "nbsp",
-        "onclick",
-        "onrowdeleting",
-        "onrowediting",
-        "onselectionchanged",
-        "onservervalidate",
-        "orassayag",
-        "runat"
-    ]
+  "cSpell.words": [
+    "Assayag",
+    "dbml",
+    "Façade",
+    "Hitech",
+    "LINQ",
+    "nbsp",
+    "onclick",
+    "onrowdeleting",
+    "onrowediting",
+    "onselectionchanged",
+    "onservervalidate",
+    "orassayag",
+    "runat",
+    "Wireup"
+  ],
+  "cSpell.ignorePaths": [
+    "coverage",
+    "node_modules",
+    "dist",
+    "pnpm-lock.yaml",
+    "pnpm-workspace.yaml"
+  ]
 }

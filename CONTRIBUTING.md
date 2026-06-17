@@ -9,12 +9,14 @@ Everyone is welcome to contribute to this project. Contributing doesn't just mea
 ### Reporting Issues
 
 If you find a bug or have a feature request:
-1. Check if the issue already exists in the GitHub Issues
+
+1. Check if the issue already exists in the [GitHub Issues](https://github.com/orassayag/hitech-buster-class-msdn-final-course-project/issues)
 2. If not, create a new issue with:
    - Clear title and description
    - Steps to reproduce (for bugs)
    - Expected vs actual behavior
-   - Your environment details (OS, .NET version, Visual Studio version)
+   - Error codes (if applicable)
+   - Your environment details (OS, Node version)
 
 ### Submitting Pull Requests
 
@@ -31,61 +33,55 @@ If you find a bug or have a feature request:
 ### Code Style Guidelines
 
 This project uses:
-- **C#** with .NET Framework
-- **ASP.NET Web Forms** for UI
-- **LINQ-to-SQL** for data access
-- **JavaScript (ES5)** for client-side interactions
+
+- **TypeScript** with strict type checking
+- **ESLint** for code quality
+- **Prettier** for code formatting
+- **InversifyJS** for dependency injection
 
 Before submitting:
-- Ensure the solution builds without errors in Visual Studio
-- Test all affected pages and functionality
-- Verify database queries work correctly
-- Check for any security vulnerabilities (SQL injection, XSS, etc.)
+
+```bash
+pnpm format
+pnpm lint
+pnpm build
+pnpm test
+```
 
 ### Coding Standards
 
-1. **Naming conventions**: Follow C# naming conventions (PascalCase for classes/methods, camelCase for local variables)
-2. **Security**: Always use parameterized queries, validate user input, and sanitize outputs
-3. **Error handling**: Include proper try-catch blocks and user-friendly error messages
-4. **Code organization**: Keep code-behind files clean and focused
-5. **Comments**: Add XML documentation comments for public methods
-6. **Database**: Use LINQ-to-SQL for all database operations
+1. **Dependency Injection**: Use @injectable decorators for services
+2. **Error handling**: All errors must include unique error codes (see `misc/error_index.txt`)
+3. **Logging**: Use structured Logger instead of console.log
+4. **Type safety**: Avoid using `any` - define proper types
+5. **Domain organization**: Place code in appropriate domain folders (not utils/)
+6. **Naming**: Use clear, descriptive names for variables and functions
 
 ### Adding New Features
 
 When adding new features:
-1. Create appropriate database tables/columns in the SQL schema
-2. Update the LINQ-to-SQL model (`Dal/VideoLibDB.dbml`)
-3. Add ASPX pages in `VideoLib/` folder
-4. Implement business logic in code-behind or `App_Code/` classes
-5. Update master page if navigation changes
-6. Test thoroughly with different user roles
 
-### Database Changes
+1. Create appropriate types in `src/types/`
+2. Add service logic in `src/services/` with DI
+3. Update scripts in `src/scripts/` if needed
+4. Add error codes and update `misc/error_index.txt`
+5. Test thoroughly with vitest
 
-When modifying the database:
-1. Document schema changes
-2. Update the LINQ-to-SQL model
-3. Ensure backward compatibility if possible
-4. Test all affected queries
+### Error Code Management
 
-### Security Considerations
+When adding new errors:
 
-This is a legacy application built in 2009. When contributing:
-- Update any deprecated security practices
-- Use modern authentication/authorization where possible
-- Validate and sanitize all user inputs
-- Prevent SQL injection by using parameterized queries
-- Protect against XSS attacks
-- Implement proper session management
+1. Use the next available error code from `misc/error_index.txt`
+2. Format: `[ERROR-XXXXXXX]` at the start of the error message
+3. Document the error in `misc/error_index.txt`
 
 ## Questions or Need Help?
 
 Please feel free to contact me with any question, comment, pull-request, issue, or any other thing you have in mind.
 
-* Or Assayag <orassayag@gmail.com>
-* GitHub: https://github.com/orassayag
-* StackOverflow: https://stackoverflow.com/users/4442606/or-assayag?tab=profile
-* LinkedIn: https://linkedin.com/in/orassayag
+- Or Assayag <orassayag@gmail.com>
+- GitHub: https://github.com/orassayag
+- StackOverflow: https://stackoverflow.com/users/4442606/or-assayag?tab=profile
+- LinkedIn: https://linkedin.com/in/orassayag
 
 Thank you for contributing! 🙏
